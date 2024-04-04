@@ -13,7 +13,7 @@ class ProjectController extends Controller
         // $projects = Project::all();
 
         //all projects with relative relationships (Types and Technologies tables)
-        $projects = Project::with('type', 'technology')->get();
+        $projects = Project::with('type', 'technology')->paginate(4);
 
         return 
             response()->json([
