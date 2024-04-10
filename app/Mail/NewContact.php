@@ -41,7 +41,7 @@ class NewContact extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'backend.emails.new-contact-mail.blade.php',
+            view: 'backend.emails.new-contact-mail',
         );
     }
 
